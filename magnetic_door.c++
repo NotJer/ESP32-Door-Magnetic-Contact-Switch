@@ -43,7 +43,7 @@ void sendEmailNotification() {
   smtpData.setSender("ESP32", "email");
   smtpData.setPriority("High");
   smtpData.setSubject("Door Open Alert");
-  smtpData.setMessage("The door has been open for more than 20 seconds.", false);
+  smtpData.setMessage("The door has been open for more than 20 seconds, please close the door.", false);
   smtpData.addRecipient("email");
 
   if (!MailClient.sendMail(smtpData)) {
